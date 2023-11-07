@@ -55,7 +55,7 @@ def recommend():
             index = movie[0]
             title_from_index = movies_data[movies_data.index == index]['title'].values[0]
             if i < 30:
-                print(i, '.', title_from_index)
+                # print(i, '.', title_from_index)
                 recommendations.append((i, title_from_index))
                 i += 1
     else:
@@ -63,5 +63,5 @@ def recommend():
 
     return render_template('index.html', recommendations=recommendations)
 
-# if __name__ == '__main__':
-#     app.run(debug=False,host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=False,host='0.0.0.0')
